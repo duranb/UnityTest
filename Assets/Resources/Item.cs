@@ -17,6 +17,7 @@ public class Item {
 		get { return _name; }
 		set { _name = value; }
 	}
+	
 	public Item(ItemTypes type, string name) {
 		_type = type;
 		_name = name;
