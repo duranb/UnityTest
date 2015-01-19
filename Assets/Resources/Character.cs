@@ -1,7 +1,7 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class Hero : MonoBehaviour, ICharacter {
+public class Character : MonoBehaviour, ICharacter {
 	public int _speed = 10;
 	public int _jump_height = 5;
 
