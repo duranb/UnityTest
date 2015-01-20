@@ -12,7 +12,7 @@ public class SpeedUp : MonoBehaviour {
 	void Start () {
 		_speedup_body = this.GetComponent<Rigidbody2D>();
 
-		_item = new Item(ItemTypes.PowerUp, "speed");
+		_item = new Item(ItemTypes.PowerUp, "speed", 2f);
 	}
 	
 	void Update() {

@@ -7,6 +7,8 @@ public enum ItemTypes
 public class Item {
 	ItemTypes _type;
 	string _name;
+	float _duration;
+	float _value;
 
 	public ItemTypes type {
 		get { return _type; }
@@ -17,9 +19,21 @@ public class Item {
 		get { return _name; }
 		set { _name = value; }
 	}
-	
-	public Item(ItemTypes type, string name) {
+
+	public float duration {
+		get { return _duration; }
+		set { _duration = value; }
+	}
+
+	public float value {
+		get { return _value; }
+		set { _value = value; }
+	}
+
+	public Item(ItemTypes type, string name, float value, float duration = -1) {
 		_type = type;
 		_name = name;
+		_duration = duration;
+		_value = value;
 	}
 }
