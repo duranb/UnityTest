@@ -1,25 +1,29 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Character : MonoBehaviour {
-	public int _speed = 10;
-	public int _jump_height = 5;
+	public float baseSpeed = 10;
+	public float baseJumpHeight = 5;
 
-	private Rigidbody2D _body;
+	protected CharacterInventory _inventory = new CharacterInventory(1);
 
-	public int speed {
-		get { return _speed; }
-		set { _speed = value; }
-	}
+	protected Rigidbody2D _body;
 
-	public int jump_height {
-		get { return _jump_height; }
-		set { _jump_height = value; }
-	}
+	protected float _speed;
+	protected float _jumpHeight;
 
 	// Use this for initialization
 	void Start () {
 		_body = this.GetComponent<Rigidbody2D>();
+
+		_speed = baseSpeed;
+		_jumpHeight = baseJumpHeight;
+	}
+
+	protected virtual void Update() {
+		_speed = baseSpeed;
+		_jumpHeight = baseJumpHeight;
 	}
 
 	public void Move(float move) {
@@ -28,7 +32,7 @@ public class Character : MonoBehaviour {
 
 	public void Jump(bool jump) {
 		if(jump) {
-			_body.AddForce(Vector2.up * jump_height, ForceMode2D.Impulse);
+			_body.AddForce(Vector2.up * _jumpHeight, ForceMode2D.Impulse);
 		}
 	}
 

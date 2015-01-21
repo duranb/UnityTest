@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"Att",
+				"AttributeModifierTypes"
+			],
+			[
+				"Attr",
+				"AttributeModifierTypes"
+			],
+			[
+				"game",
+				"gameObject	Component.*"
+			],
+			[
+				"collid",
+				"collider	Collision2D.*"
+			],
+			[
+				"jump",
+				"jump_height"
+			],
+			[
+				"Vector",
+				"Vector2	*()"
+			],
+			[
+				"GetCompo",
+				"GetComponent	Component.*<T>()"
+			],
+			[
+				"Rigid",
+				"Rigidbody2D	[class]"
+			],
+			[
 				"int",
 				"int	PersistentListenerMode.*"
 			],
@@ -482,48 +514,64 @@
 			[
 				"downl",
 				"download_time"
-			],
-			[
-				"DOWNLOAD",
-				"DOWNLOAD_SPEED"
-			],
-			[
-				"fil",
-				"file_size"
-			],
-			[
-				"gly",
-				"glyphicon-ok"
-			],
-			[
-				"user_g",
-				"user_guides_html"
-			],
-			[
-				"user",
-				"user_guides"
-			],
-			[
-				"mis",
-				"missionLiteData"
-			],
-			[
-				"prod",
-				"product-details-mission"
-			],
-			[
-				"font",
-				"font-size"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "Assets/Resources/Hero.cs",
+			"settings":
+			{
+				"buffer_size": 490,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Resources/Character.cs",
+			"settings":
+			{
+				"buffer_size": 615,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Resources/CharacterInventory.cs",
+			"settings":
+			{
+				"buffer_size": 847,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Resources/AttributeModifier.cs",
+			"settings":
+			{
+				"buffer_size": 195,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "\n\n				switch(item.type) {\n					case ItemTypes.AttributeModifier:\n						AttributeModifier modifier = (AttributeModifier)item;\n						switch(modifier.modifierType) {\n							case AttributeModifierTypes.Speed:\n								\n								break;\n							case AttributeModifierTypes.Jump:\n\n								break;\n						}\n						break;					\n				}",
+			"settings":
+			{
+				"buffer_size": 317,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Resources/Item.cs",
+			"settings":
+			{
+				"buffer_size": 246,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 81.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
@@ -559,7 +607,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 400.0
+		"width": 663.0
 	},
 	"console":
 	{
@@ -576,7 +624,13 @@
 	},
 	"file_history":
 	[
+		"/C/Program Files/Sublime Text 2/Packages/C#/Comments.tmPreferences",
 		"/C/Users/Bryan/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Program Files/Sublime Text 2/Pristine Packages/C#.sublime-package",
+		"/C/Users/Bryan/Documents/Projects/Unity/UnityTest/Assets/Resources/SpeedUp.cs",
+		"/C/Users/Bryan/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Bryan/Documents/Projects/Unity/UnityTest/Assets/Resources/ICharacter.cs",
+		"/C/Users/Bryan/Documents/Projects/Unity/UnityTest/Assets/Standard Assets/Character Controllers/Sources/Scripts/CharacterMotor.js",
 		"/C/Users/Bryan/Documents/Projects/Unity/2D/Assets/Resources/Character.cs",
 		"/C/Users/Bryan/Documents/Projects/Web/smapdash/js/dash/realtimemgr.js",
 		"/C/Users/Bryan/Documents/SwitchBlade-UI/MacroScripts/EnableSpeakers2.ahk",
@@ -697,13 +751,7 @@
 		"/C/xampp/htdocs/co2/views/common/footer.php",
 		"/C/xampp/htdocs/co2/static/js/searchHelper.js",
 		"/C/Users/Bryan/Downloads/TCCON_SitesLocationsOperational.txt",
-		"/C/xampp/htdocs/co2/.htaccess",
-		"/C/Users/Bryan/Desktop/config",
-		"/C/Users/Bryan/Documents/Meg/Meg matlab bme 210/Bme_210_hw_6/hw6_part1.m",
-		"/C/xampp/htdocs/co2/modules/data-drive/views/expert.php",
-		"/C/xampp/htdocs/co2/static/js/map-utils.js",
-		"/C/xampp/htdocs/co2/views/support.php",
-		"/C/xampp/htdocs/co2/static/js/homepage.js"
+		"/C/xampp/htdocs/co2/.htaccess"
 	],
 	"find":
 	{
@@ -725,6 +773,54 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"powerUp",
+			"PowerUp",
+			"ArrayList",
+			"item",
+			"private",
+			"Weapon",
+			"PowerUp",
+			"SpeedUp",
+			"item",
+			"Body",
+			"Inventory",
+			"JumpHeight",
+			"	}",
+			"Speed",
+			"_items",
+			"CharacterInventory",
+			"capacity",
+			"items",
+			"Capacity",
+			"Items",
+			"_body",
+			"_items",
+			"Inventory",
+			"_inventory",
+			"Inventory",
+			"_jump_height",
+			"speed",
+			"_speed",
+			"_",
+			"GetComponent",
+			"public",
+			"_",
+			"comment",
+			"capacity",
+			"SpeedUp",
+			"_name",
+			"string",
+			"name",
+			"_name",
+			"name",
+			"_powerup_body",
+			"_hero_body",
+			"Rigidbody",
+			"private",
+			"body",
+			"public",
+			"hero_body",
+			"'",
 			"void",
 			"override",
 			"public ",
@@ -804,55 +900,7 @@
 			"getNextVideo",
 			"play",
 			"id=",
-			"playing",
-			"video",
-			"current",
-			"col-md-(\\d{0,2})",
-			"col-md-(\\d{0, 2})",
-			"new_idx",
-			"this",
-			"helper",
-			"this",
-			"row",
-			"$(ui.",
-			"[0]",
-			"videoId",
-			"old_idx",
-			"indexed_list",
-			"next_videoId",
-			"updated",
-			"next_video",
-			"this.state.",
-			"current_list",
-			"nextProps",
-			"this.state",
-			"this.props.current_list",
-			"prevProps.current_list",
-			"ar g = ",
-			"videoId",
-			"list-updated",
-			"update-list",
-			".update",
-			"update",
-			"i",
-			"editted",
-			"props",
-			"self",
-			"lastSpeedi",
-			"getNextVideo",
-			"this.props",
-			"this",
-			" ",
-			"span",
-			"right",
-			"true",
-			" expanded={this.expanded}",
-			"section_name",
-			"this.props",
-			"expandChildren",
-			"e",
-			"expandedPath",
-			"this.state.showChildren"
+			"playing"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -908,13 +956,176 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Assets/Resources/Hero.cs",
+					"settings":
+					{
+						"buffer_size": 490,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								385,
+								385
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/Resources/Character.cs",
+					"settings":
+					{
+						"buffer_size": 615,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								170,
+								171
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Assets/Resources/CharacterInventory.cs",
+					"settings":
+					{
+						"buffer_size": 847,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								756,
+								756
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		},
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 3,
+					"file": "Assets/Resources/AttributeModifier.cs",
+					"settings":
+					{
+						"buffer_size": 195,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								195,
+								195
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"settings":
+					{
+						"buffer_size": 317,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								317,
+								317
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Assets/Resources/Item.cs",
+					"settings":
+					{
+						"buffer_size": 246,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								88,
+								88
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],

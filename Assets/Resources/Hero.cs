@@ -1,10 +1,27 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Hero : Character {
 	// Use this for initialization
 
-	void Update() {
+	protected override void Update() {
+		base.Update();
+		List<AttributeModifier> modifiers = _inventory.modifiers;
+
+		_inventory.BurnDownModifiers(Time.deltaTime);
+
+		foreach(AttributeModifier modifier in modifiers) {
+			switch(modifier.modifierType) {
+				case AttributeModifierTypes.Speed:
+					this._speed = this.baseSpeed * modifier.value;
+					break;
+				case AttributeModifierTypes.Jump:
+					this._jumpHeight = this.baseJumpHeight * modifier.value;
+					break;
+			}
+		}
+
 		Attack();
 	}
 
@@ -12,5 +29,14 @@ public class Hero : Character {
 	void FixedUpdate () {
 		Move(Input.GetAxis("Horizontal"));
 		Jump(Input.GetKeyDown("space"));
+	}
+
+	void OnCollisionEnter2D(Collision2D collision) {
+		Item item = collision.gameObject.GetComponent<Item>();
+		if(item != null) {
+			if(this._inventory.Add(item)) {
+				Destroy(collision.gameObject);
+			}
+		}
 	}
 }
