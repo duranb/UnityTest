@@ -27,7 +27,17 @@ public class Character : MonoBehaviour {
 	}
 
 	public void Move(float move) {
-		_body.velocity = new Vector2(move * _speed, _body.velocity.y);
+		Vector2 new_velocity = new Vector2(move * _speed, _body.velocity.y);
+
+		if(new_velocity.x != 0) {
+			int direction = (new_velocity.x < 0) ? -1 : 1;
+
+			Vector3 scale = transform.localScale;
+		    scale.x = Mathf.Abs(scale.x) * direction;
+		    transform.localScale = scale;
+		}
+
+	    _body.velocity = new_velocity;
 	}
 
 	public void Jump(bool jump) {
