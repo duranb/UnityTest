@@ -32,11 +32,6 @@ public class Hero : Character {
 	}
 
 	void OnCollisionEnter2D(Collision2D collision) {
-		Item item = collision.gameObject.GetComponent<Item>();
-		if(item != null) {
-			if(this._inventory.Add(item)) {
-				Destroy(collision.gameObject);
-			}
-		}
+		this.Pickup(collision.gameObject);
 	}
 }
